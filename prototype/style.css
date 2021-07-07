@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:600&display=swap");
+
+html,
+body {
+  width: 700px;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.logo {
+  font-family: "Monoton", cursive;
+  margin-left: -20px;
+  font-size: 25px;
+}
+.nav_links {
+  text-decoration: none;
+  color: #efefef;
+}
+
+span {
+  position: relative;
+  display: inline-flex;
+  width: 110px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+span a {
+  font-size: 15px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform 0.25s;
+  font-family: "Montserrat", sans-serif;
+}
+span a:before,
+span a:after {
+  position: absolute;
+  content: "LOGIN";
+  height: 55px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+span a:before {
+  color: #fff;
+  background: #000;
+  transform: rotateY(0deg) translateZ(25px);
+}
+span a:after {
+  color: #000;
+  transform: rotateX(90deg) translateZ(25px);
+}
+span a:hover {
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+/* style of pomodoro timer */
+.pomodoro {
+  color: #fff;
+  height: 200px;
+  width: 700px;
+  background-color: #db524d;
+  margin-left: -4px;
+  margin-top: 4%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.btn {
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #0000004d;
+  padding: 2px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+.btn:hover {
+  background: #080808;
+  letter-spacing: 1px;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
+
+/*timers*/
+.label {
+  align-self: center;
+  justify-self: center;
+
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#work {
+  grid-area: 1 / 2 / 1 / 2;
+}
+#break {
+  grid-area: 1 / 4 / 1 / 4;
+}
+#cycles {
+  grid-area: 1 / 3 / 1 / 3;
+}
+
+.timer {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+
+  font-size: 30px;
+  font-weight: bold;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+#counter {
+  grid-area: 2 / 3 / 2 / 3;
+  color: red;
+}
+
+#work-timer {
+  grid-area: 2 / 2 / 2 / 2;
+}
+
+#break-timer {
+  grid-area: 2 / 4 / 2 / 4;
+}
+
+/*buttons*/
+
+.btn {
+  align-self: center;
+  justify-self: center;
+
+  width: 100px;
+  height: 30px;
+
+  font-size: 20px;
+}
+
+#start {
+  grid-area: 3 / 2 / 3 / 2;
+}
+
+#reset {
+  grid-area: 3 / 3 / 3 / 3;
+}
+
+#stop {
+  grid-area: 3 / 4 / 3 / 4;
+}
+
+/* scrol style */
+
+.scrolldown {
+  --color: white;
+  --sizeX: 30px;
+  --sizeY: 50px;
+  position: relative;
+  width: var(--sizeX);
+  height: var(--sizeY);
+  margin-left: var(sizeX / 2);
+  border: calc(var(--sizeX) / 10) solid var(--color);
+  border-radius: 50px;
+  box-sizing: border-box;
+  margin: 180px 50% 150px 50%;
+}
+
+.scrolldown::before {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: var(--color);
+  border-radius: 100%;
+  animation: scrolldown-anim 2s infinite;
+  box-sizing: border-box;
+  box-shadow: 0px -5px 3px 1px #ffffff66;
+}
+
+footer {
+  margin-top: 40px;
+  border-top: 2px solid #efefef;
+  text-align: center;
+  padding-top: 30px;
+  color: hsl(0, 0%, 100%);
+  padding-bottom: 20px;
+}
+
+.footer__sitemap {
+  margin-bottom: 14px;
+}
+
+.footer__sitemap > a {
+  color: grey;
+  font-size: 14px;
+  margin: 0px 4px;
+}
+
+.footer__snslinks {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.footer__snslinks img {
+  width: 28px;
+  height: 28px;
+  border-radius: 100px;
+  padding: 6px;
+  margin: 0px 4px;
+}
+.footer__me {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.footer__me a {
+  opacity: 0.8;
+}
+.footer__snslink__ph {
+  display: inline-block;
+  background-color: #999;
+  height: 28px;
+  width: 28px;
+  border-radius: 100px;
+  padding: 6px;
+  margin: 0px 4px;
+}
+
+.footer__snslink__ph a {
+  color: rgb(0, 0, 0);
+  font-size: 23px;
+}
+
+.footer__allrights {
+  font-size: 12px;
+  color: hsl(0, 0%, 0%);
+}
+
+@keyframes scrolldown-anim {
+  0% {
+    opacity: 0;
+    height: 6px;
+  }
+  40% {
+    opacity: 1;
+    height: 10px;
+  }
+  80% {
+    transform: translate(0, 20px);
+    height: 10px;
+    opacity: 0;
+  }
+  100% {
+    height: 3px;
+    opacity: 0;
+  }
+}
+.chevrons {
+  padding: 6px 0 0 0;
+  margin-left: -3px;
+  margin-top: 48px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chevrondown {
+  margin-top: -6px;
+  position: relative;
+  border: solid var(--color);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+}
+.chevrondown:nth-child(odd) {
+  animation: pulse 500ms ease infinite alternate;
+}
+.chevrondown:nth-child(even) {
+  animation: pulse 500ms ease infinite alternate 250ms;
+}
+@keyframes pulse {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+/* until here */
+
+/* content style*/
+h1 {
+  color: hsl(357, 50%, 22%);
+  letter-spacing: -0.2px;
+}
+h3{
+  color: hsl(357, 50%, 22%);
+  letter-spacing: -0.2px;
+}
+hr {
+  width: 60px;
+  height: 4px;
+  background-color: #f05b56;
+  border: none;
+  margin-left: 0px;
+  margin-bottom: 50px;
+  padding: 0;
+}
+p {
+
+  color: hsl(0, 0%, 100%);
+}
+.text{
+  color: hsl(357, 12%, 42%);
+  font-size: 18px;
+  line-height: 1.6em;
+}
+
+
+html{
+  scroll-behavior: smooth;
+}

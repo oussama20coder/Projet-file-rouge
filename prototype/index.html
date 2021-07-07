@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomofocus</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="master.css">
+   
+
+    <!-- font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+
+
+ 
+
+</head>
+
+
+
+<body>
+    <div id="container">
+
+    <div class="header">
+        <div class="logo">
+            <h4>Pomofocus</h4>
+        </div>
+
+
+        <span><a href="#"></a></span>
+
+    </div>
+  
+
+    <!--  -->
+ 
+        <div class="pomodoro">
+
+
+            <p id="work" class="label">Work:</p>
+            <p id="break" class="label">Break:</p>
+            <p id="cycles" class="label">Cycles:</p>
+            <!--Work Timer-->
+            <div id="work-timer" class="timer">
+                <p id="w_minutes">25</p>
+                <p class="semicolon">:</p>
+                <p id="w_seconds">00</p>
+            </div>
+
+            <!--Cycle Counter-->
+            <p id="counter" class="timer">0</p>
+
+            <!--Break Timer-->
+            <div id="break-timer" class="timer">
+                <p id="b_minutes">05</p>
+                <p class="semicolon">:</p>
+                <p id="b_seconds">00</p>
+            </div>
+            <button id="start" class="btn">Start</button>
+            <button id="stop" class="btn">Pause</button>
+            <button id="reset" class="btn">Reset</button>
+        </div>
+    </div>
+
+    <!-- to do list -->
+    <div id="app"></div>
+
+
+    <!-- scroll down toy -->
+    <div class='scrolldown' style="--color: #db524d">
+        <div class="chevrons">
+          <div class='chevrondown'></div>
+          <div class='chevrondown'></div>
+        </div>
+      </div>
+
+
+
+
+<div class="about">
+
+    <div class="about1" id="about">
+        <h1>An online Pomodoro Timer to boost your productivity</h1>
+        <h3>What is Pomofocus?</h3>
+        <hr>
+        <div class="text">Pomofocus is a customizable pomodoro timer that works on desktop browser. The aim of this app is to help you focus on any task you are working on, such as study, writing, or coding. This app is inspired by <strong>Pomodoro Technique</strong> which is a time management method developed by Francesco Cirillo.</div>
+    </div>
+    <div class="about2">
+        <h3>What is Pomodoro Technique?</h3>
+        <hr>
+        <div class="text">The Pomodoro Technique is created by Francesco Cirillo for a more productive way to work and study. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks. Each interval is known as a pomodoro, from the Italian word for 'tomato', after the tomato-shaped kitchen timer that Cirillo used as a university student. <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique "target="_blank" ><strong >Wikipedia</strong></a></div>
+    </div>
+    
+    <div class="about3">
+        <h3>How to use the Pomodoro Timer?</h3>
+        <hr>
+        <ol>
+            <li><strong> Add tasks to work on today</strong></li>
+            <li><strong>Set estimate pomodoros </strong>(1 = 25min of work) for each tasks</li>
+            <li><strong>Select a task </strong>to work on</li>
+            <li><strong>Start timer </strong>and focus on the task for 25 minutes</li>
+            <li><strong>Take a break  </strong>for 5 minutes when the alarm ring</li>
+            <li><strong>Iterate </strong>3-5 until you finish the tasks</li>
+        </ol>
+    </div>
+
+
+</div>
+
+
+
+
+<footer>
+    <div class="footer__sitemap">
+        <a href="#">HOME</a>
+        <a href="#about">SIMPLE VERSION</a>
+        <a href="#">LOGIN</a>
+    </div>
+    
+     <div>
+        <div class="footer__snslinks">
+            <a href="" target="_blank" rel="noopener"><img src="icons/facebook.png" alt="facebook icon" /></a>		
+            <a href="" target="_blank" rel="noopener"><img src="icons/instagram.png" alt="instagram icon" /></a>	
+            <a href="" target="_blank" rel="noopener"><img src="icons/github.png" alt="github icon" /></a>	
+     </div>
+    </div>
+    <div class="footer__me">Made with <3 by <a href="#" target="_self" rel="noopener"><strong>Oussama</strong></a></div>
+    <div class="footer__allrights">&copy;Pomofocus 2021. All Rights Reserved.</div>
+</div>
+
+ </footer>
+
+
+
+<!-- to do list links -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src='https://unpkg.com/react/umd/react.development.js'></script>
+<script src='https://unpkg.com/react-dom/umd/react-dom.development.js'></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="main.js"></script>
+<script type="text/babel" src="app.js"></script>
+</body>
+</html>
